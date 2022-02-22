@@ -1,0 +1,17 @@
+= Teak.UserData
+:caution-caption: Deprecated
+
+
+
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|AdditionalData |Arbitrary, per-user, information sent from the Teak server.
+|OptOutEmail |True if the user has opted out of Teak email campaigns.
+|OptOutPush |True if the user has opted out of Teak push notification campaigns.
+|===

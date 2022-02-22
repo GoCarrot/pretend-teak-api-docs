@@ -1,0 +1,32 @@
+= io.teak.sdk.Teak.AdditionalDataEvent
+:caution-caption: Deprecated
+
+Event sent when &quot;additional data&quot; is available for the user.
+
+== Attributes
+
+=== additionalData
+
+
+A JSON object containing user-defined data received from the server.
+
+== Methods
+
+=== AdditionalDataEvent
+
+
+
+[source,csharp]
+----
+ AdditionalDataEvent(final JSONObject additionalData);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|additionalData |
+|===
+
+

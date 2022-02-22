@@ -1,0 +1,31 @@
+= Teak.UserConfiguration
+:caution-caption: Deprecated
+
+Configuration options for identifying a user.
+
+
+== Methods
+
+=== ToDictionary
+
+
+
+[source,csharp]
+----
+Dictionary undefined ToDictionary();
+----
+// TODO: collapseable here?
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|Email |Email address.
+|FacebookId |
+|OptOutFacebook |
+|OptOutIdfa |
+|OptOutPushKey |
+|===

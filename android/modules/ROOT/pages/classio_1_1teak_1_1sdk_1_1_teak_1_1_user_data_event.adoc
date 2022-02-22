@@ -1,0 +1,57 @@
+= io.teak.sdk.Teak.UserDataEvent
+:caution-caption: Deprecated
+
+Event sent when data about the user becomes available, or gets updated.
+
+== Attributes
+
+=== additionalData
+
+
+A JSON object containing user-defined data received from the Teak server, or null.
+
+=== optOutEmail
+
+
+True if the user is opted out of Teak email campaigns.
+
+=== optOutPush
+
+
+True if the user is opted out of Teak push campaigns.
+
+== Methods
+
+=== UserDataEvent
+
+
+
+[source,csharp]
+----
+ UserDataEvent(final JSONObject additionalData,
+               final boolean optOutEmail,
+               final boolean optOutPush);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|additionalData |
+|optOutEmail |
+|optOutPush |
+|===
+
+=== toJSON
+
+
+
+[source,csharp]
+----
+JSONObject toJSON();
+----
+// TODO: collapseable here?
+
+
+

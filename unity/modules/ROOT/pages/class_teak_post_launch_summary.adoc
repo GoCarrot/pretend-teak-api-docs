@@ -1,0 +1,52 @@
+= TeakPostLaunchSummary
+:caution-caption: Deprecated
+
+
+
+
+== Methods
+
+=== TeakPostLaunchSummary
+
+
+
+[source,csharp]
+----
+ TeakPostLaunchSummary(Dictionary undefined json);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|json |
+|===
+
+=== ToString
+
+
+
+[source,csharp]
+----
+override string ToString();
+----
+// TODO: collapseable here?
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|LaunchLink |
+|ScheduleName |
+|ScheduleId |
+|CreativeName |
+|CreativeId |
+|RewardId |
+|ChannelName |
+|DeepLink |
+|SourceSendId |
+|===

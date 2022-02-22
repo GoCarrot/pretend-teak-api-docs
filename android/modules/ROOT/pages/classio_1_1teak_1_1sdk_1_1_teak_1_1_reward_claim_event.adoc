@@ -1,0 +1,8 @@
+= io.teak.sdk.Teak.RewardClaimEvent
+:caution-caption: Deprecated
+
+Event posted when a reward claim attempt has occurred.
+
+
+
+

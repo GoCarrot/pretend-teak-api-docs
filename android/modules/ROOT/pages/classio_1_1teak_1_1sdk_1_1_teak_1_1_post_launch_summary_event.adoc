@@ -1,0 +1,8 @@
+= io.teak.sdk.Teak.PostLaunchSummaryEvent
+:caution-caption: Deprecated
+
+Event posted whenever the app launches.
+
+
+
+

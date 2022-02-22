@@ -1,0 +1,51 @@
+= TeakNotification
+:caution-caption: Deprecated
+
+Interface for manipulating notifications from Teak.
+
+
+== Methods
+
+=== TeakNotification
+
+
+
+[source,csharp]
+----
+ TeakNotification(Dictionary undefined json);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|json |
+|===
+
+=== ToString
+
+
+
+[source,csharp]
+----
+override string ToString();
+----
+// TODO: collapseable here?
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|Incentivized |
+|ScheduleName |
+|ScheduleId |
+|CreativeName |
+|CreativeId |
+|ChannelName |
+|RewardId |
+|DeepLink |
+|===

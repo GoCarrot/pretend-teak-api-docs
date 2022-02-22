@@ -1,0 +1,54 @@
+= io.teak.sdk.Teak.LaunchData
+:caution-caption: Deprecated
+
+Base class for providing data about the launch of the app.
+
+== Attributes
+
+=== launchLink
+
+
+The link associated with this launch; or null.
+
+== Methods
+
+=== LaunchData
+
+[object Object]
+
+[source,csharp]
+----
+ LaunchData(@Nullable Uri launchLink);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|launchLink |
+|===
+
+=== toSessionAttributionMap
+
+For internal use.
+
+[source,csharp]
+----
+Map undefined toSessionAttributionMap();
+----
+// TODO: collapseable here?
+
+
+=== toMap
+
+Convert to a Map, intended to be converted to JSON and consumed by the Teak Unity SDK.
+
+[source,csharp]
+----
+Map undefined toMap();
+----
+// TODO: collapseable here?
+
+
+

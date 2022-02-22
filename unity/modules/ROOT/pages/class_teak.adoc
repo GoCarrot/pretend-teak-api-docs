@@ -1,0 +1,444 @@
+= Teak
+:caution-caption: Deprecated
+
+A MonoBehaviour which can be attached to a Unity GameObject to provide access to Teak functionality.
+
+
+== Methods
+
+=== IdentifyUser
+[CAUTION]
+====
+Please us IdentifyUser(string, UserConfiguration) instead.
+====
+
+Tell Teak how it should identify the current user.
+
+[source,csharp]
+----
+void IdentifyUser(string userIdentifier,
+                  string email);
+----
+// TODO: collapseable here?
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|email |The email address for the current user.
+|===
+
+=== IdentifyUser
+[CAUTION]
+====
+Please us IdentifyUser(string, UserConfiguration) instead.
+====
+
+Tell Teak how it should identify the current user.
+
+[source,csharp]
+----
+void IdentifyUser(string userIdentifier,
+                  List undefined optOut,
+                  string email);
+----
+// TODO: collapseable here?
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|optOut |A list containing zero or more of: OptOutIdfa, OptOutPushKey, OptOutFacebook
+|email |The email address for the current user.
+|===
+
+=== IdentifyUser
+
+Tell Teak how it should identify the current user.
+
+[source,csharp]
+----
+void IdentifyUser(string userIdentifier,
+                  [object Object] userConfiguration);
+----
+// TODO: collapseable here?
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|userConfiguration |Additional configuration for the current user.
+|===
+
+=== Logout
+
+Logout the current user.
+
+[source,csharp]
+----
+void Logout();
+----
+// TODO: collapseable here?
+
+
+=== SetOptOutEmail
+
+Assign email opt-out status for the current user.
+
+[source,csharp]
+----
+void SetOptOutEmail(bool optOut);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|optOut |
+|===
+
+=== SetOptOutPush
+
+Assign push notification opt-out status for the current user.
+
+[source,csharp]
+----
+void SetOptOutPush(bool optOut);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|optOut |
+|===
+
+=== RefreshPushTokenIfAuthorized
+
+On iOS, if &#x27;TeakDoNotRefreshPushToken&#x27; is set to &#x27;true&#x27; then this method will tell Teak that the push token is ready, and that the user has authorized push notifications.
+
+[source,csharp]
+----
+void RefreshPushTokenIfAuthorized();
+----
+// TODO: collapseable here?
+
+
+=== TrackEvent
+
+Track an arbitrary event in Teak.
+
+[source,csharp]
+----
+void TrackEvent(string actionId,
+                string objectTypeId,
+                string objectInstanceId);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|actionId |
+|objectTypeId |
+|objectInstanceId |
+|===
+
+=== IncrementEvent
+
+Increment an arbitrary event in Teak.
+
+[source,csharp]
+----
+void IncrementEvent(string actionId,
+                    string objectTypeId,
+                    string objectInstanceId,
+                    long count);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|actionId |
+|objectTypeId |
+|objectInstanceId |
+|count |
+|===
+
+=== RegisterRoute
+
+Method used to register a deep link route.
+
+[source,csharp]
+----
+void RegisterRoute(string route,
+                   string name,
+                   string description,
+                   Action undefined action);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|route |
+|name |
+|description |
+|action |
+|===
+
+=== SetBadgeCount
+
+Method to set the number displayed on the icon of the app on the home screen.
+
+[source,csharp]
+----
+bool SetBadgeCount(int count);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|count |
+|===
+
+=== OpenSettingsAppToThisAppsSettings
+
+Open the settings for your app.
+
+[source,csharp]
+----
+bool OpenSettingsAppToThisAppsSettings();
+----
+// TODO: collapseable here?
+
+
+=== SetNumericAttribute
+
+Assign a numeric value to a user profile attribute
+
+[source,csharp]
+----
+void SetNumericAttribute(string key,
+                         double value);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|key |
+|value |
+|===
+
+=== SetStringAttribute
+
+Assign a string value to a user profile attribute
+
+[source,csharp]
+----
+void SetStringAttribute(string key,
+                        string value);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|key |
+|value |
+|===
+
+=== GetDeviceConfiguration
+
+Get Teak&#x27;s configuration data about the current device.
+
+[source,csharp]
+----
+Dictionary undefined GetDeviceConfiguration();
+----
+// TODO: collapseable here?
+
+
+=== RegisterForProvisionalNotifications
+
+Register for Provisional Push Notifications.
+
+*Return*
+true if the device was an iOS 12+ device
+[source,csharp]
+----
+bool RegisterForProvisionalNotifications();
+----
+// TODO: collapseable here?
+This method only has any effect on iOS devices running iOS 12 or higher.
+
+=== RegisterForNotifications
+
+Register for Push Notifications.
+
+[source,csharp]
+----
+void RegisterForNotifications();
+----
+// TODO: collapseable here?
+
+
+=== ProcessDeepLinks
+
+Indicate that your app is ready for deep links.
+
+[source,csharp]
+----
+void ProcessDeepLinks();
+----
+// TODO: collapseable here?
+
+
+=== HandleDeepLinkPath
+
+Manually pass Teak a deep link path to evalute.
+
+[source,csharp]
+----
+bool HandleDeepLinkPath(string url);
+----
+// TODO: collapseable here?
+This path should be prefixed with a forward slash, and can contain query parameters, e.g. /foo/bar?fizz&#x3D;buzz It should not contain a host, or a scheme.
+This function will only execute deep links that have been defined through Teak. It has no visibility into any other SDKs or custom code.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|url |The url to attempt handling.
+|===
+
+== Events
+
+=== OnLaunchedFromNotification
+
+An event which gets fired when the app is launched via a push notification.
+
+[source,csharp]
+----
+TeakNotification OnLaunchedFromNotification();
+----
+// TODO: collapseable here?
+
+
+=== OnReward
+
+An event which gets fired when a Teak Reward has been processed (successfully or unsuccessfully).
+
+[source,csharp]
+----
+TeakReward OnReward();
+----
+// TODO: collapseable here?
+
+
+=== OnForegroundNotification
+
+An event which gets fired when a push notification is received while the app is in the foreground.
+
+[source,csharp]
+----
+TeakNotification OnForegroundNotification();
+----
+// TODO: collapseable here?
+
+
+=== OnLogEvent
+
+An event which is dispatched for each log event from the Teak SDK
+
+[source,csharp]
+----
+System.Action undefined OnLogEvent();
+----
+// TODO: collapseable here?
+
+
+=== OnAdditionalData
+
+An event which is dispatched when additional data is available for the current user.
+
+[source,csharp]
+----
+System.Action undefined OnAdditionalData();
+----
+// TODO: collapseable here?
+
+
+=== OnUserData
+
+An event which is dispatched when user data becomes available or is changed.
+
+[source,csharp]
+----
+Teak.UserData OnUserData();
+----
+// TODO: collapseable here?
+
+
+=== OnLaunchedFromLink
+
+An event which is dispatched when the app is launched from a link created by the Teak dashboard.
+
+[source,csharp]
+----
+System.Action undefined OnLaunchedFromLink();
+----
+// TODO: collapseable here?
+
+
+=== OnPostLaunchSummary
+
+An event which is dispatched each time the app is launched, with info about the launch.
+
+[source,csharp]
+----
+TeakPostLaunchSummary OnPostLaunchSummary();
+----
+// TODO: collapseable here?
+
+
+=== OnCallbackError
+
+An event which is dispatched when your code, executed via deep link callback, throws an exception.
+
+[source,csharp]
+----
+System.Action undefined OnCallbackError();
+----
+// TODO: collapseable here?
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|Instance |[object Object]
+|Version |Teak SDK version.
+|AppId |Teak App Id.
+|APIKey |Teak API Key.
+|UNIXNow |UNIX Timestamp.
+|UserId |The user identifier for the current user.
+|PushNotificationState |State of push notifications.
+|AppConfiguration |Get Teak&#x27;s configuration data about the current app.
+|Trace |Teak will log all Unity method calls to the Unity log if true.
+|===

@@ -1,0 +1,50 @@
+= io.teak.sdk.Teak.Event
+:caution-caption: Deprecated
+
+
+
+== Attributes
+
+=== launchData
+
+
+Data associated with this launch.
+
+=== reward
+
+
+[object Object]
+
+== Methods
+
+=== Event
+
+Event base class.
+
+[source,csharp]
+----
+ Event(@NonNull final LaunchData launchData,
+       @Nullable final TeakNotification.Reward reward);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|launchData |
+|reward |
+|===
+
+=== toJSON
+
+Used internally for JSON serialization.
+
+[source,csharp]
+----
+JSONObject toJSON();
+----
+// TODO: collapseable here?
+
+
+

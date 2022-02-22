@@ -1,0 +1,8 @@
+= io.teak.sdk.Teak.DeepLink
+:caution-caption: Deprecated
+
+Interface for running code when a deep link is received.
+
+
+
+

@@ -1,0 +1,472 @@
+= io.teak.sdk.Teak
+:caution-caption: Deprecated
+
+Teak.
+
+
+== Methods
+
+=== onReceive
+
+
+
+[source,csharp]
+----
+void onReceive(final Context inContext,
+               final Intent intent);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|inContext |
+|intent |
+|===
+
+== Static Methods
+
+=== isEnabled
+
+Is Teak enabled?
+
+[source,csharp]
+----
+boolean isEnabled();
+----
+// TODO: collapseable here?
+
+
+=== onCreate
+
+[object Object]
+
+[source,csharp]
+----
+void onCreate(@NonNull Activity activity);
+----
+// TODO: collapseable here?
+[object Object]
+[object Object]
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|activity |[object Object]
+|===
+
+=== onCreate
+
+Used for internal testing.
+
+[source,csharp]
+----
+void onCreate(@NonNull Activity activity,
+              @Nullable IObjectFactory objectFactory);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|activity |
+|objectFactory |
+|===
+
+=== identifyUser
+[CAUTION]
+====
+[object Object]
+====
+
+Tell Teak how it should identify the current user.
+
+[source,csharp]
+----
+void identifyUser(final String userIdentifier);
+----
+// TODO: collapseable here?
+[object Object]
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|===
+
+=== identifyUser
+
+Tell Teak how it should identify the current user.
+
+[source,csharp]
+----
+void identifyUser(final String userIdentifier,
+                  final String email);
+----
+// TODO: collapseable here?
+[object Object]
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|email |The email address for the user.
+|===
+
+=== identifyUser
+
+Tell Teak how it should identify the current user, with data collection opt-out.
+
+[source,csharp]
+----
+void identifyUser(final String userIdentifier,
+                  final String[] optOut);
+----
+// TODO: collapseable here?
+[object Object]
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|optOut |[object Object]
+|===
+
+=== identifyUser
+
+Tell Teak how it should identify the current user, with data collection opt-out and email.
+
+[source,csharp]
+----
+void identifyUser(final String userIdentifier,
+                  final String[] optOut,
+                  final String email);
+----
+// TODO: collapseable here?
+[object Object]
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|optOut |[object Object]
+|email |The email address for the user.
+|===
+
+=== identifyUser
+
+Tell Teak how it should identify the current user, with additional options and configuration.
+
+[source,csharp]
+----
+void identifyUser(final String userIdentifier,
+                  final UserConfiguration userConfiguration);
+----
+// TODO: collapseable here?
+[object Object]
+This should be the same way you identify the user in your backend.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |An identifier which is unique for the current user.
+|userConfiguration |A set of configuration keys and value,
+|===
+
+=== logout
+
+Logout the current user.
+
+[source,csharp]
+----
+void logout();
+----
+// TODO: collapseable here?
+
+
+=== trackEvent
+
+Track an arbitrary event in Teak.
+
+[source,csharp]
+----
+void trackEvent(final String actionId,
+                final String objectTypeId,
+                final String objectInstanceId);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|actionId |
+|objectTypeId |
+|objectInstanceId |
+|===
+
+=== incrementEvent
+
+Increment the value an arbitrary event in Teak.
+
+[source,csharp]
+----
+void incrementEvent(final String actionId,
+                    final String objectTypeId,
+                    final String objectInstanceId,
+                    final long count);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|actionId |
+|objectTypeId |
+|objectInstanceId |
+|count |
+|===
+
+=== getNotificationStatus
+
+Has the user disabled notifications for this app.
+
+*Return*
+&#x27;true&#x27; if the device is above API 19 and the user has disabled notifications, &#x27;false&#x27; otherwise.
+[source,csharp]
+----
+int getNotificationStatus();
+----
+// TODO: collapseable here?
+This will always return &#x27;false&#x27; for any device below API 19.
+
+=== openSettingsAppToThisAppsSettings
+
+Open the settings app to the settings for this app.
+
+*Return*
+&#x27;true&#x27; if Teak was (probably) able to open the settings, &#x27;false&#x27; if Teak was (probably) not able to open the settings.
+[source,csharp]
+----
+boolean openSettingsAppToThisAppsSettings();
+----
+// TODO: collapseable here?
+Be sure to prompt the user to re-enable notifications for your app before calling this function.
+This will always return &#x27;false&#x27; for any device below API 19.
+
+=== setApplicationBadgeNumber
+
+Set the badge number on the icon of the application.
+
+*Return*
+&#x27;true&#x27; if Teak was able to set the badge number, &#x27;false&#x27; otherwise.
+[source,csharp]
+----
+boolean setApplicationBadgeNumber(int count);
+----
+// TODO: collapseable here?
+Set the count to 0 to remove the badge.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|count |
+|===
+
+=== setNumericAttribute
+
+Track a numeric player profile attribute.
+
+[source,csharp]
+----
+void setNumericAttribute(final String attributeName,
+                         final double attributeValue);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|attributeName |
+|attributeValue |
+|===
+
+=== setStringAttribute
+
+Track a string player profile attribute.
+
+[source,csharp]
+----
+void setStringAttribute(final String attributeName,
+                        final String attributeValue);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|attributeName |
+|attributeValue |
+|===
+
+=== getDeviceConfiguration
+
+Get Teak&#x27;s configuration data about the current device.
+
+[source,csharp]
+----
+String getDeviceConfiguration();
+----
+// TODO: collapseable here?
+
+
+=== getAppConfiguration
+
+Get Teak&#x27;s configuration data about the current app.
+
+[source,csharp]
+----
+String getAppConfiguration();
+----
+// TODO: collapseable here?
+
+
+=== registerDeepLink
+
+Register a deep link route with Teak.
+
+[source,csharp]
+----
+void registerDeepLink(@NonNull String route,
+                      @NonNull String name,
+                      @NonNull String description,
+                      @NonNull Teak.DeepLink call);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|route |
+|name |
+|description |
+|call |
+|===
+
+=== setLogListener
+
+Listen for Teak SDK log events.
+
+[source,csharp]
+----
+void setLogListener(LogListener logListener);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|logListener |
+|===
+
+=== formatJSONForLogging
+
+
+
+[source,csharp]
+----
+String formatJSONForLogging(JSONObject obj);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|obj |
+|===
+
+=== processDeepLinks
+
+Indicate that your app is ready for deep links.
+
+[source,csharp]
+----
+void processDeepLinks();
+----
+// TODO: collapseable here?
+
+
+=== waitUntilDeepLinksAreReady
+
+Block until deep links are ready for processing.
+
+[source,csharp]
+----
+void waitUntilDeepLinksAreReady();
+----
+// TODO: collapseable here?
+
+
+=== handleDeepLinkPath
+
+Manually pass Teak a deep link path to handle.
+
+[source,csharp]
+----
+boolean handleDeepLinkPath(final String path);
+----
+// TODO: collapseable here?
+This path should be prefixed with a forward slash, and can contain query parameters, e.g. /foo/bar?fizz&#x3D;buzz It should not contain a host, or a scheme.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|path |The deep link path to process.
+|===
+
+=== setOptOutEmail
+
+Set the opt out state for email.
+
+[source,csharp]
+----
+void setOptOutEmail(final boolean optOut);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|optOut |
+|===
+
+=== setOptOutPush
+
+Set the opt out state for push notifications.
+
+[source,csharp]
+----
+void setOptOutPush(final boolean optOut);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|optOut |
+|===
+

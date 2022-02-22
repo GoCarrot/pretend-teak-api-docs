@@ -1,0 +1,118 @@
+= io.teak.sdk.Teak.UserConfiguration
+:caution-caption: Deprecated
+
+
+
+== Attributes
+
+=== email
+
+
+
+
+=== facebookId
+
+
+
+
+=== optOutFacebook
+
+
+Opt out of collecting a Facebook Access Token for this specific user.
+
+=== optOutIDFA
+
+
+Opt out of collecting an IDFA for this specific user.
+
+=== optOutPushKey
+
+
+Opt out of collecting a Push Key for this specific user.
+
+== Methods
+
+=== UserConfiguration
+
+
+
+[source,csharp]
+----
+ UserConfiguration();
+----
+// TODO: collapseable here?
+
+
+=== UserConfiguration
+
+
+
+[source,csharp]
+----
+ UserConfiguration(final String email);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|email |
+|===
+
+=== UserConfiguration
+
+
+
+[source,csharp]
+----
+ UserConfiguration(final String email,
+                   final String facebookId);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|email |
+|facebookId |
+|===
+
+=== UserConfiguration
+
+
+
+[source,csharp]
+----
+ UserConfiguration(final String email,
+                   final String facebookId,
+                   final boolean optOutFacebook,
+                   final boolean optOutIDFA,
+                   final boolean optOutPushKey);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|email |
+|facebookId |
+|optOutFacebook |
+|optOutIDFA |
+|optOutPushKey |
+|===
+
+=== toHash
+
+
+
+[source,csharp]
+----
+Map undefined toHash();
+----
+// TODO: collapseable here?
+
+
+

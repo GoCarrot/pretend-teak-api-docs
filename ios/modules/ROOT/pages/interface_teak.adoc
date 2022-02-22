@@ -1,0 +1,306 @@
+= Teak
+
+TODO!
+
+
+== Methods
+
+=== - identifyUser:
+Tell Teak how to identify the current user.
+
+[source,csharp]
+----
+- (void)identifyUser:(NSString *)userId
+                    ;
+----
+// TODO: collapseable here?
+This should be how you identify the user in your back-end.
+This functionality is also accessable from the C API: extern void TeakIdentifyUser(const char* userId, const char* userConfigurationJson);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userId |The string Teak should use to identify the current user.
+|===
+
+=== - identifyUser:withEmail:
+Tell Teak how to identify the current user.
+
+[source,csharp]
+----
+- (void)identifyUser:(NSString *)userId
+           withEmail:(NSString *)email
+                    ;
+----
+// TODO: collapseable here?
+This should be how you identify the user in your back-end.
+This functionality is also accessable from the C API: extern void TeakIdentifyUser(const char* userId, const char* userConfigurationJson);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userId |The string Teak should use to identify the current user.
+|email |The email address for the current user.
+|===
+
+=== - identifyUser:withOptOutList:
+Tell Teak how to identify the current user, with data collection opt-out.
+
+[source,csharp]
+----
+- (void)identifyUser:(NSString *)userId
+      withOptOutList:(NSArray *)optOut
+                    ;
+----
+// TODO: collapseable here?
+This should be how you identify the user in your back-end.
+This functionality is also accessable from the C API: extern void TeakIdentifyUser(const char* userId, const char* userConfigurationJson);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userId |The string Teak should use to identify the current user.
+|optOut |A list containing zero or more of: TeakOptOutIdfa, TeakOptOutPushKey, TeakOptOutFacebook
+|===
+
+=== - identifyUser:withOptOutList:andEmail:
+Tell Teak how to identify the current user, with data collection opt-out.
+
+[source,csharp]
+----
+- (void)identifyUser:(NSString *)userId
+      withOptOutList:(NSArray *)optOut
+            andEmail:(NSString *)email
+                    ;
+----
+// TODO: collapseable here?
+This should be how you identify the user in your back-end.
+This functionality is also accessable from the C API: extern void TeakIdentifyUser(const char* userId, const char* userConfigurationJson);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userId |The string Teak should use to identify the current user.
+|optOut |A list containing zero or more of: TeakOptOutIdfa, TeakOptOutPushKey, TeakOptOutFacebook
+|email |The email address for the current user.
+|===
+
+=== - identifyUser:withConfiguration:
+Tell Teak how to identify the current user, with data collection opt-out.
+
+[source,csharp]
+----
+- (void)identifyUser:(NSString *)userIdentifier
+   withConfiguration:(TeakUserConfiguration *)userConfiguration
+                    ;
+----
+// TODO: collapseable here?
+This should be how you identify the user in your back-end.
+This functionality is also accessable from the C API: extern void TeakIdentifyUser(const char* userId, const char* userConfigurationJson);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|userIdentifier |The string Teak should use to identify the current user.
+|userConfiguration |Additional configuration for the current user.
+|===
+
+=== - logout
+Logout the current user.
+
+[source,csharp]
+----
+- (void)logout;
+----
+// TODO: collapseable here?
+
+
+=== - refreshPushTokenIfAuthorized
+If the user has authorized push notifications, manually refresh the push token.
+
+[source,csharp]
+----
+- (void)refreshPushTokenIfAuthorized;
+----
+// TODO: collapseable here?
+This is used in conjunction with the &#x27;TeakDoNotRefreshPushToken&#x27; Plist configuration flag. If &#x27;TeakDoNotRefreshPushToken&#x27; is false, or not present, you do not need to call this method.
+
+=== - trackEventWithActionId:forObjectTypeId:andObjectInstanceId:
+Track an arbitrary event in Teak.
+
+[source,csharp]
+----
+- (void)trackEventWithActionId:(NSString *)actionId
+               forObjectTypeId:(NSString *)objectTypeId
+           andObjectInstanceId:(NSString *)objectInstanceId
+                              ;
+----
+// TODO: collapseable here?
+[object Object]
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|actionId |
+|objectTypeId |
+|objectInstanceId |
+|===
+
+=== - incrementEventWithActionId:forObjectTypeId:andObjectInstanceId:count:
+Increment an arbitrary event in Teak.
+
+[source,csharp]
+----
+- (void)incrementEventWithActionId:(NSString *)actionId
+                   forObjectTypeId:(NSString *)objectTypeId
+               andObjectInstanceId:(NSString *)objectInstanceId
+                             count:(int64_t)count
+                                  ;
+----
+// TODO: collapseable here?
+[object Object]
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|actionId |
+|objectTypeId |
+|objectInstanceId |
+|count |
+|===
+
+=== - notificationState
+Push notification authorization state.
+
+*Return*
+Notification state, see: TeakNotificationState
+[source,csharp]
+----
+- (TeakNotificationState)notificationState;
+----
+// TODO: collapseable here?
+If they have disabled push notifications, you can prompt them to re-enable and use openSettingsAppToThisAppsSettings to open the Settings app.
+
+=== - openSettingsAppToThisAppsSettings
+Open Settings.app to the settings for this application.
+
+[source,csharp]
+----
+- (BOOL)openSettingsAppToThisAppsSettings;
+----
+// TODO: collapseable here?
+[object Object]
+
+=== - setApplicationBadgeNumber:
+Set the badge number on the icon of the application.
+
+[source,csharp]
+----
+- (void)setApplicationBadgeNumber:(int)count
+                                 ;
+----
+// TODO: collapseable here?
+[object Object]
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|count |
+|===
+
+=== - setNumericAttribute:forKey:
+Track a numeric player profile attribute.
+
+[source,csharp]
+----
+- (void)setNumericAttribute:(double)value
+                     forKey:(NSString *)key
+                           ;
+----
+// TODO: collapseable here?
+This functionality is also accessable from the C API: extern void TeakSetNumericAttribute(const char* cstr_key, double value);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|value |The numeric value to assign.
+|key |The name of the numeric attribute.
+|===
+
+=== - setStringAttribute:forKey:
+Track a string player profile attribute.
+
+[source,csharp]
+----
+- (void)setStringAttribute:(NSString *)value
+                    forKey:(NSString *)key
+                          ;
+----
+// TODO: collapseable here?
+This functionality is also accessable from the C API: extern void TeakSetStringAttribute(const char* cstr_key, const char* cstr_value);
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|value |The string value to assign.
+|key |The name of the string attribute.
+|===
+
+=== - getDeviceConfiguration
+Get Teak&#x27;s configuration data about the current device.
+
+[source,csharp]
+----
+- (NSString *)getDeviceConfiguration;
+----
+// TODO: collapseable here?
+[object Object]
+
+=== - getAppConfiguration
+Get Teak&#x27;s configuration data about the current app.
+
+[source,csharp]
+----
+- (NSString *)getAppConfiguration;
+----
+// TODO: collapseable here?
+[object Object]
+
+=== - processDeepLinks
+Process deep links.
+
+[source,csharp]
+----
+- (void)processDeepLinks;
+----
+// TODO: collapseable here?
+[object Object]
+
+=== - handleDeepLinkPath:
+Manually pass Teak a deep link path to handle.
+
+[source,csharp]
+----
+- (BOOL)handleDeepLinkPath:(NSString *)path
+                          ;
+----
+// TODO: collapseable here?
+This path should be prefixed with a forward slash, and can contain query parameters, e.g. /foo/bar?fizz&#x3D;buzz It should not contain a host, or a scheme.
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|path |The deep link path to process.
+|===
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|sdkVersion |Teak SDK Version.
+|enableDebugOutput |Is debug logging enabled.
+|enableRemoteLogging |Is remote logging enabled.
+|logListener |The active log listener.
+|===

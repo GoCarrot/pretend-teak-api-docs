@@ -1,0 +1,19 @@
+= TeakSettings
+:caution-caption: Deprecated
+
+
+
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|Instance |
+|AppId |
+|APIKey |
+|ShortlinkDomain |
+|JustShutUpIKnowWhatImDoing |
+|===

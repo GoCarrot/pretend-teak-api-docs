@@ -1,0 +1,23 @@
+= TeakNotification.Reply.Notification
+:caution-caption: Deprecated
+
+
+
+== Attributes
+ScheduleId 
+CreativeId 
+
+== Methods
+
+=== ToString
+
+
+
+[source,csharp]
+----
+override string ToString();
+----
+// TODO: collapseable here?
+
+
+

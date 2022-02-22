@@ -1,0 +1,45 @@
+= io.teak.sdk.Teak.NotificationEvent
+:caution-caption: Deprecated
+
+Event posted when a foreground notification was received, or the game was launched from a Teak email, or Teak push notification.
+
+== Attributes
+
+=== isForeground
+
+
+True if this push notification was received when the app was in the foreground.
+
+== Methods
+
+=== NotificationEvent
+
+
+
+[source,csharp]
+----
+ NotificationEvent(@NonNull final NotificationLaunchData launchData,
+                   final boolean isForeground);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|launchData |
+|isForeground |
+|===
+
+=== toJSON
+
+
+
+[source,csharp]
+----
+JSONObject toJSON();
+----
+// TODO: collapseable here?
+
+
+

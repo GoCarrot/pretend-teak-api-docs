@@ -1,0 +1,63 @@
+= io.teak.sdk.Teak.RewardlinkLaunchData
+:caution-caption: Deprecated
+
+Launch data for a Teak reward link.
+
+
+== Methods
+
+=== RewardlinkLaunchData
+
+
+
+[source,csharp]
+----
+ RewardlinkLaunchData(@NonNull final Uri uri,
+                      @Nullable final Uri shortLink);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|uri |
+|shortLink |
+|===
+
+=== mergeDeepLink
+
+
+
+[source,csharp]
+----
+AttributedLaunchData mergeDeepLink(@NonNull Uri uri);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|uri |
+|===
+
+== Static Methods
+
+=== isTeakRewardLink
+
+For internal use.
+
+[source,csharp]
+----
+boolean isTeakRewardLink(@NonNull final Uri uri);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|uri |
+|===
+

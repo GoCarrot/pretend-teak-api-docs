@@ -1,0 +1,8 @@
+= io.teak.sdk.Teak.LaunchFromLinkEvent
+:caution-caption: Deprecated
+
+Event posted when the app was launched from a link created by the Teak dashboard.
+
+
+
+

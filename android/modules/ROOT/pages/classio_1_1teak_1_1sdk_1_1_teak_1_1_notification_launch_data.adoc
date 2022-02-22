@@ -1,0 +1,106 @@
+= io.teak.sdk.Teak.NotificationLaunchData
+:caution-caption: Deprecated
+
+Launch data for a Teak push notification or email.
+
+== Attributes
+
+=== sourceSendId
+
+
+The send-id of the notification.
+
+== Methods
+
+=== NotificationLaunchData
+
+Construct NotificationLaunchData for a push notification.
+
+[source,csharp]
+----
+ NotificationLaunchData(@NonNull final Bundle bundle);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|bundle |
+|===
+
+=== NotificationLaunchData
+
+Construct NotificationLaunchData for an email link.
+
+[source,csharp]
+----
+ NotificationLaunchData(@NonNull final Uri uri);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|uri |
+|===
+
+=== mergeDeepLink
+
+
+
+[source,csharp]
+----
+AttributedLaunchData mergeDeepLink(@NonNull Uri uri);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|uri |
+|===
+
+=== toMap
+
+
+
+[source,csharp]
+----
+Map undefined toMap();
+----
+// TODO: collapseable here?
+
+
+=== toSessionAttributionMap
+
+
+
+[source,csharp]
+----
+Map undefined toSessionAttributionMap();
+----
+// TODO: collapseable here?
+
+
+== Static Methods
+
+=== isTeakEmailUri
+
+For internal use.
+
+[source,csharp]
+----
+boolean isTeakEmailUri(@NonNull final Uri uri);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|uri |
+|===
+

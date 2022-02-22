@@ -1,0 +1,52 @@
+= TeakReward
+:caution-caption: Deprecated
+
+
+
+
+== Methods
+
+=== TeakReward
+
+
+
+[source,csharp]
+----
+ TeakReward(Dictionary undefined json);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|json |
+|===
+
+=== ToString
+
+
+
+[source,csharp]
+----
+override string ToString();
+----
+// TODO: collapseable here?
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|Status |
+|Reward |
+|ScheduleName |
+|ScheduleId |
+|CreativeName |
+|CreativeId |
+|ChannelName |
+|Incentivized |
+|RewardId |
+|===

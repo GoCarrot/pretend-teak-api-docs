@@ -1,0 +1,49 @@
+= TeakLogEvent
+:caution-caption: Deprecated
+
+
+
+
+== Methods
+
+=== TeakLogEvent
+
+
+
+[source,csharp]
+----
+ TeakLogEvent(Dictionary undefined logData);
+----
+// TODO: collapseable here?
+
+[cols="1,2a"]
+|===
+|Parameter |Description
+
+|logData |
+|===
+
+=== ToString
+
+
+
+[source,csharp]
+----
+override string ToString();
+----
+// TODO: collapseable here?
+
+
+
+== Properties
+[cols="1,2a"]
+|===
+|Property |Description
+
+|RunId |
+|EventId |
+|TimeStamp |
+|EventType |
+|LogLevel |
+|EventData |
+|===
